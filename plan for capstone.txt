@@ -1,0 +1,50 @@
+Desktop
+
+  div: container
+	header
+		div -logo (padding laft 24px=...rem)(height 32px=...rem)
+			div-img
+			h2
+		div - nav (padding right24px=...rem)
+			li (padding left/right 8px=...rem)
+
+
+	div-banner
+		div - content =rows (padding top & bottom 32px=...rem)
+		  div-img (padding left/right 24px=....rem)
+		  div- h1 p writing
+		     -link / display block width 100% padding(8px=...rem)
+
+
+	div-info 
+		div-articles(= columns) (padding top & bottom 32px=...rem)_
+			div-main article  (padding left/right 24px=....rem)
+				div-img
+				div- writing
+		  	div-minor /// articles= rows
+				div-minor_1 
+					div-img width 33% height auto / position absolute
+					div- ( h3 / p /a ) width 65%
+				div minor_2 
+					div-img width 33% height auto / position absolute
+					div- ( h3 / p /a ) width 65%
+				div minor_3
+					div-img width 33% height auto / position absolute
+					div- ( h3 / p /a ) width 65%
+
+	div -courses
+		h2 (width 100% text-align:centre; padding top 32px=....rem)
+		div -subjects margion 0 auto)(padding 32px...rem 72rem=...rem)
+			div-s.e. (background-color:white;)padding bottom
+				div-s.e.img backgroun-img src:url("..."), center , cover, height auto.)
+				h3 / p / p (could make h3 a link)
+
+
+	exhibit
+
+
+	footer
+
+  /container
+	
+	
