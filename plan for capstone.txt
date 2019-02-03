@@ -1,4 +1,4 @@
-Desktop
+[Desktop
 
   div: container
 	header
@@ -11,7 +11,7 @@ Desktop
 
 	div-banner
 		div - content =rows (padding top & bottom 32px=...rem)
-		  div-img (padding left/right 24px=....rem)
+		  div- advert -img (padding left/right 24px=....rem)
 		  div- h1 p writing
 		     -link / display block width 100% padding(8px=...rem)
 
@@ -34,16 +34,29 @@ Desktop
 
 	div -courses
 		h2 (width 100% text-align:centre; padding top 32px=....rem)
-		div -subjects margion 0 auto)(padding 32px...rem 72rem=...rem)
+		div -subjects margin 0 auto)(padding 32px...rem 72rem=...rem)
 			div-s.e. (background-color:white;)padding bottom
 				div-s.e.img backgroun-img src:url("..."), center , cover, height auto.)
 				h3 / p / p (could make h3 a link)
+			
+				div-s.e.img backgroun-img src:url("..."), center , cover, height auto.)
+				h3 / p / p (could make h3 a link)
 
+				div-design. (background-color:white;)padding bottom
+				div-s.e.img backgroun-img src:url("..."), center , cover, height auto.)
+				h3 / p / p (could make h3 a link)
+
+				copy X3
 
 	exhibit
+		h2 (width 100% text-align:centre; padding top 32px=....rem) ##copy courses##
+		###copy div articles###
 
 
 	footer
+		width 100% height 5rem display flex /  
+		POSS= span jafnjkfnn - position absolte/ top 1rem left 1.5rem 
+		POSS = space between padding top 1rem / padding left/right 1.5rem/ padding bottom 3rem
 
   /container
 	
