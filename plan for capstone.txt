@@ -60,4 +60,6 @@
 
   /container
 	
+
+########minor articles--- minor 1 2 3 should div exclude writing??
 	
