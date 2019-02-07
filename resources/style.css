@@ -19,13 +19,13 @@ body {
   flex-flow:column nowrap;
 }
 
-header {
-  /*display: flex;*/
+.header {
+  display: inline-flex;
   flex-direction: row;
-  justify-content:flex-end;
-  align-content: space-between;
+  justify-content:space-between;
+  align-items:center;
   /*width:100%; test*/
-  height: 4rem;
+  padding:1rem 0;
   background-color: white;
 
 
@@ -33,12 +33,12 @@ header {
 
 .logo {
   display:inline-flex;
+  /*align-items: center;*/
   padding-left: 1.5rem;
   border:1px solid red;/*for debugging*/
-
 }
-
 .logo h1 {
+  padding-bottom:0.5rem;
   font-size: 2rem;
   text-decoration: uppercase;
   color:grey;
@@ -49,16 +49,16 @@ header {
 
 .nav {
   padding-right:1rem;
-  display: inline-flex;
+
 }
 
 .nav ul {
   display: inline-flex;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+
   border:1px solid green;/*for debugging*/
 }
 .nav ul a {
+  padding-left: 1rem;
   text-decoration: none;
 }
 
@@ -312,17 +312,15 @@ header {
 .exhibit_container{
   display:flex;
   flex-flow: row nowrap;
-  border:1px solid blue;/*for debugging*/
-
-
 }
 .thesis {
-  border:1px solid red;/*for debugging*/
   width:60%;
 }
-
+.thesis video{
+  display:block;
+  width:100%;
+}
 .reimagine {
-  border:1px solid green;/*for debugging*/
   width:100%;
   display: flex;
   flex-direction: column;
@@ -340,38 +338,72 @@ header {
   font-size: 1rem;
 }
 
-
-.minor_exhibit {
-  border:1px solid black;/*for debugging*/
+/*cutting out the code for minor exhibit */
+.minor_exhibit{
   width:40%;
-  flex-flow:column wrap;
-  display: inline-block;/*testing*/
-  /*flex-direction: row;testing*/
-
+  border:1px solid black;/*for debugging*/
 }
-
-.minor_exhibit p{
-  font-weight: 600;
-  font-size: 1.5rem;
-}
-
 .exhibit_1,
-.exhibit_2 {
-    display:flex;/*block;*/
-    width:100%;/*testing*/
-    height:33%;
-    overflow:hidden;
-    align-items: center;
-  }
 .exhibit_2{
-  background-color: grey;
+  display:flex;
+  width:100%;
+  /*height:calc(100%/3);*/
+  align-items:center;
+  border:1px solid blue;/*for debugging*/
+  color:grey;
 }
-.thesis_fisma img,
-.thesis_now_and_then img {
-    margin: 1rem 1rem;
-    width:35%;
-    height:auto;
-  }
+.exhibit_wrapper{
+  display: flex;
+  flex-flow:column wrap;
+  max-width: 35%;
+  height:auto;
+  margin:1rem 0 1rem 1rem;
+  border:1px solid brown;/*for debugging*/
+}
+.exhibit_wrapper img{
+  display: block;
+  width:100%;
+  justify-content: center;
+  align-content: center;
+  border:1px solid black;/*for debugging*/
+}
+
+.topic{
+  width:60%;
+  border:1px solid green;/*for debugging*/
+}
+.topic p{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color:black;
+}
+
+
+
+
+
+
+
+
+/* ---- End of Thesis ---------*/
+.footer{
+  display:flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  padding:1rem 1.5rem 3rem 1.5rem;
+  background-color: white;/*match header*/
+  color: grey;
+  border:1px solid blue;/*for debugging*/
+}
+.terms li{
+  display: inline;
+  padding-left:1rem;
+}
+.footer a{
+  text-decoration: none;
+}
+
+
 /*-------mobile styles----*/
 @media only screen and (max-width:480px){
   body{
