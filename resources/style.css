@@ -18,6 +18,7 @@ body {
   background-color:#708EA4;/*chosen randomly*/
   display:flex;
   flex-flow:column nowrap;
+  margin:0;
 }
 
 header {
@@ -34,10 +35,24 @@ header {
 
 .logo {
   display:inline-flex;
-  /*align-items: center;*/
   padding-left: 1.5rem;
   border:1px solid red;/*for debugging*/
 }
+.logo_mobile{
+  display:none;
+}
+@media only screen and (max-width:730px){/*mobile @media*/
+  .logo, .nav{
+    display:none;
+  }
+  .logo_mobile{
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    padding:0 2rem;
+  }
+}/* end of mobile @media*/
+
 .logo h1 {
   padding-bottom:0.5rem;
   font-size: 2rem;
@@ -75,7 +90,6 @@ header {
   overflow: hidden;
   padding: 2rem 0;
 }
-
 .advert {
   width:60%;
   margin-left: 1.5rem;
@@ -120,12 +134,42 @@ header {
   padding: 0.75rem 0;
   width:100%;
   background-color: grey;
-
 }
-/* END of banner  */
+@media only screen and (max-width:730px){/*(max-width:480px){/*mobile @media*/
+  .banner{
+    margin:0 auto;
+  }
+  .content{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    width:100%;
+    max-width: 480px;
+  }
+  .advert{
+    display: block;
+    max-height:35%;
+    width:auto;
+    margin:0;
+  }
+  .button{
+    display:flex;
+    flex:stretch;
+    width:100%;
+    padding:2rem 1rem;
+  }
+  .button h1{
+    padding-left: 1rem;
+  }
+  .button p{
+    padding:2rem 1rem;
+  }
+}/* end of mobile @media*/
+/* ------- END of banner --------- */
 .info {
   background-color: white;
   flex-direction: row;
+  overflow: hidden;/*could possibly remove at end*/
 }
 
 .articles {
@@ -172,7 +216,8 @@ header {
 }
 .practicing cite {
   font-style: italic;
-  padding-bottom: 2rem;/*-----------------why not working----*/
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .minor_articles {
@@ -188,6 +233,7 @@ header {
   width:100%;
   background-color:yellow;/*for debugging*/
   color: blue;
+  text-decoration: none;
   padding: 1rem 0;
   text-align: center;
   border-radius: 5%;
@@ -217,12 +263,14 @@ header {
   max-width:35%;
   height:auto;
 }
-.info_orientation img,
+
+.info_main img,
 .info_campus img,
 .info_guest_lecture img{
   width:100%;
   display: block;
 }
+
 .container_1,
 .container_2,
 .container_3{
@@ -230,6 +278,46 @@ header {
   justify-content: center;
   width:100%;
 }
+
+@media only screen and (max-width:730px){
+  .articles{
+    padding:0;
+    }.main_article{
+    display:none;
+  }
+  .minor_articles{
+    width:100%;
+  }
+}/*responsive design transition to mobile */
+
+@media only screen and (max-width:480px){/* info mobile @media*/
+  .main_article{
+    display:none;
+  }
+  .minor_articles{
+    width:auto;
+  }
+  .minor_1{
+    display:flex;
+    flex-direction: column;
+    height:auto;
+  }
+  .info.orientation{
+    display:block;
+    width:100%;
+  }
+  .minor_1 img{
+    display:block;
+    width:100%;
+    border: 1px white solid;/*for debugging*/
+  }
+  .container_1{
+    width:90%;
+    padding-top:2rem;
+    padding-left: 1rem;
+    padding-bottom:4rem;
+  }
+}/* end of info mobile @media*/
 /* -------end of info --- */
 .courses{
   display:flex;
@@ -250,11 +338,11 @@ header {
   align-items: stretch;
   border:1px solid white;/*for debugging*/
   justify-content: space-between;/*blocked by calc width*/
-  /*justify-content: space-between;*//*not sure bout this*/
 
-  padding-top: 1rem;
-  margin:0 3.5rem 1rem 3.5rem;
-  /*border:1px solid red;for debugging*/
+  margin:1rem 3.5rem 1rem 3.5rem;
+
+  /*padding-top: 1rem;
+  margin:0 3.5rem 1rem 3.5rem;*/
 }
 .subject_container{
   width: calc(100%/3.34);
@@ -303,7 +391,76 @@ header {
   text-transform: uppercase;
   padding: 0.5rem 0;
 }
+@media only screen and (max-width:1130px) and (min-width:730px){/*could be 720*/
+  .courses h2{
+    padding-bottom: 0.5rem;
+  }
+  .subjects{
+    flex-direction:row wrap;
+    justify-content: space-around;
+    margin: 0;
+    padding:0 0;
+  }
+  .subject_container{
+    margin:0;
+  }
+}
+@media only screen and (max-width:729px){/*could be 719*/
+  .subjects{
+    flex-direction:column;
+    margin: 0 5%;
+  }
+  .subject_container{
+    width:auto;
+    margin:0 0 0.5rem 0;
+    /*padding-top: 0.5rem;*/
+  }
+  .course_software img,
+  .computer_art img,
+  .course_design img,
+  .course_data img,
+  .business img,
+  .marketing img{
+    display: none;
+  }
 
+  .subject_1,
+  .subject_2 ,
+  .subject_3 ,
+  .subject_4 ,
+  .subject_5 ,
+  .subject_6{
+    padding:0 1rem;
+  }
+  .subject_1 p,
+  .subject_2 p,
+  .subject_3 p,
+  .subject_4 p,
+  .subject_5 p,
+  .subject_6 p{
+    display:none;
+  }
+  .subject_1 span,
+  .subject_2 span,
+  .subject_3 span,
+  .subject_4 span,
+  .subject_5 span,
+  .subject_6 span{
+    display:none;
+  }
+  .subject_1 h3,
+  .subject_2 h3,
+  .subject_3 h3,
+  .subject_4 h3,
+  .subject_5 h3,
+  .subject_6 h3{
+    font-weight: 600;
+    font-size: 1.75rem;
+    background-color: inherit;/*change this*/
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+}
 /*----------- End of Subjects -----*/
 .exhibit {
   background-color: white;
@@ -348,7 +505,6 @@ header {
   padding-bottom:2rem;
 }
 
-/*cutting out the code for minor exhibit */
 .minor_exhibit{
   width:40%;
   border:1px solid black;/*for debugging*/
@@ -380,6 +536,7 @@ header {
 
 .topic{
   width:55%;
+  overflow: hidden;
   border:1px solid green;/*for debugging*/
 }
 .topic p{
@@ -387,14 +544,26 @@ header {
   font-weight: 600;
   color:black;
 }
+@media only screen and (max-width:730px) and (min-width:481px){
+  .minor_exhibit{
+    display:none;
+  }
+  .thesis{
+    width:100%;
+  }
+}/*responsive transition*/
 
-
-
-
-
-
-
-
+@media only screen and (max-width:480px){
+  .minor_exhibit{
+    display:none;
+  }
+  .reimagine{
+    display:none;
+  }
+  .thesis{
+    width:100%;
+  }
+}/*end of exhibit mobile */
 /* ---- End of exhibit ---------*/
 footer{
   display:flex;
@@ -415,15 +584,27 @@ footer a{
 
 
 /*-------mobile styles----*/
-@media only screen and (max-width:480px){
+@media only screen and (max-width:480px){/*debugging can be removed*/
   body{
     background-color: green;
   }
 }
+@media only screen and (max-width:610px){
+  .terms{
+    display:none;
+  }
+  footer span{
+    margin:0 auto;
+  }
+  footer{
+    padding-bottom: 1rem;
+  }
 
+}
 
 /*-------tablet styles----*/
-@media only screen and (min-width:481px) and (max-width:960px){
+@media only screen and (min-width:481px) and (max-width:960px){/*debugging
+  can be removed*/
   body{
     background-color: blue;
   }
