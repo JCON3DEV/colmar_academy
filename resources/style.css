@@ -177,7 +177,7 @@ header {
 
 .main_article {
   padding: 0 1.5rem;
-  border:1px solid blue;/*for debugging*/
+  /* border:1px solid blue;for debugging */
   width: 60%;
 
 }
@@ -185,7 +185,7 @@ header {
 .info_main {
   width:100%;
   display:block;
-  border:1px solid red;/*for debugging*/
+  /* border:1px solid red;for debugging */
 }
 .info_main img{
   max-height: 650px;
@@ -193,7 +193,7 @@ header {
   width:100%;
 }
 .practicing {
-  border:1px solid green;/*for debugging*/
+  /* border:1px solid green;for debugging */
   width:100%;
   display: flex;
   flex-direction: column;
@@ -219,7 +219,7 @@ header {
 
 .minor_articles {
   background-color: #dbe9d8; /*  blue-grey*/
-  border:1px solid black;/*for debugging*/
+  /* border:1px solid black;for debugging */
   width:40%;
   flex-flow:column wrap;
   display: inline-block;/*testing*/
@@ -248,7 +248,7 @@ header {
   width:100%;/*testing*/
   height:33%;
   overflow:hidden;
-  border:1px solid yellow;/*for debugging*/
+  /* border:1px solid yellow;for debugging */
   align-items: center;
 }
 .info_orientation,
@@ -263,7 +263,8 @@ header {
 
 .info_main img,
 .info_campus img,
-.info_guest_lecture img{
+.info_guest_lecture img,
+.info_orientation img {
   width:100%;
   display: block;
 }
@@ -271,7 +272,7 @@ header {
 .container_1,
 .container_2,
 .container_3{
-  border:1px solid red;/*for debugging*/
+  /* border:1px solid red;for debugging */
   justify-content: center;
   width:100%;
 }
@@ -309,7 +310,7 @@ header {
   .minor_1 img{
     display:block;
     width:100%;
-    border: 1px white solid;/*for debugging*/
+    /* border: 1px white solid;for debugging */
   }
   .container_1{
     width:90%;
@@ -336,7 +337,7 @@ header {
   display:flex;
   flex-flow: row wrap;
   align-items: stretch;
-  border:1px solid white;/*for debugging - i like the effect*/
+  /* border:1px solid white;for debugging - i like the effect */
   justify-content: space-between;/*blocked by calc width*/
   margin:1rem 3.5rem 1rem 3.5rem;
 }
